@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"standalone="no"?>
+<resources>
+
+<string name="app_name">VISCUIT_SDK_SAMPLE</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_sub">SubActivity</string>
+</resources>

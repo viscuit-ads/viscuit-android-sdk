@@ -1,0 +1,16 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.video_wave.MainActivity" >
+    
+			 	
+<Button
+ 				          android:id="@+id/playad1"
+ 				          android:layout_width="match_parent"
+ 				          android:layout_height="wrap_content"
+ 				          android:layout_marginTop="5dp"
+ 				          android:onClick="onClick"
+        android:text="광고 호출하기" />
+ 				      
+</RelativeLayout>
