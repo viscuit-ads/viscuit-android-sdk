@@ -33,6 +33,9 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 ```
+Viscuit을 Android 6.0 이상에서 사용하실 경우에는
+android.permission.WRITE_EXTERNAL_STORAGE 권한을 획득하셔야 합니다.
+
 ##### 1.2 Google Play Service meta-data 추가
 ```ruby
     <meta-data
@@ -64,8 +67,8 @@
 ```java
 ViscuitSDK.init(this, "viscuit", "test_ads", null);
 ```
-
-
+Viscuit을 Android 6.0 이상에서 사용하실 경우에는
+android.permission.WRITE_EXTERNAL_STORAGE 권한을 미리 획득하신후 초기화를 하셔야 합니다.
 #### 2.3 콜백을 받기 위한 리스너 등록 및 광고 호출
 리워드 지급 목적으로 제공되는 Listener입니다.
 사용자가 동영상 광고 시청에 대한 CallBack을 제공합니다.
