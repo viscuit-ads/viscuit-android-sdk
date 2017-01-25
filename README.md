@@ -10,16 +10,18 @@
 		* [1.3 viscuit Activity 추가](#13-viscuit-activity-추가)
     * [2. VISCUIT 사용하기](#2-viscuit-사용하기)
     	* [2.1 라이브러리 IMPORT](#21-라이브러리-import)
-    	* [2.2 VISCUIT 광고를 위한 변수 설정](#22-viscuit-광고를-위한-변수-설정)
-    	* [2.3 광고 객체 초기화](#23-광고-객체-초기화)
-    	* [2.4 콜백을 받기 위한 리스너 리스너 등록 및 광고 호출](#24-콜백을-받기-위한-리스너-등록-및-광고-호출)
-    		* [2.4.1 viscuit_listener 등록](#241-viscuit_listener-등록)
-    		* [2.4.2 Activity Life Cycle 체크](#242-activity-life-cycle-체크)
+    	* [2.2 VISCUIT 초기화](#22-viscuit-초기화)
+    	* [2.3 콜백을 받기 위한 리스너 등록](#23-콜백을-받기-위한-리스너-등록)
+    	* [2.4 광고 호출](#24-콜백을-받기-위한-리스너-등록-및-광고-호출)
+    	* [2.5 광고 존재 여부 확인](#25-광고-존재-여부-확인)
+    	* [2.6 라이프 사이클 등록](#26-라이프-사이클-등록)
+    	* [2.7 Proguard](#27-proguard)
+
 
 ---
 
 ## VISCUIT SDK 구성
-- viscuit_android_sdk_{version}.jar
+- <span style="color:red">viscuit_android_sdk_1_1_3.jar</span>
 - 샘플 프로젝트
 - 연동가이드
 
@@ -42,14 +44,14 @@ android.permission.WRITE_EXTERNAL_STORAGE 권한을 획득하셔야 합니다.
         android:name="com.google.android.gms.version"
         android:value="@integer/google_play_services_version"/>
 ```
-##### 1.3 viscuit Activity 추가
+##### 1.3 <span style="color:red">viscuit Activity 추가</span>
 ```xml
     <activity
-        android:name="com.viscuit.sdk.viscuit_activity"
+        android:name="com.viscuit.sdk.ViscuitActivity"
+        android:clearTaskOnLaunch="false"
+        android:configChanges="keyboardHidden|orientation|screenSize"
         android:launchMode="singleTask"
         android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-        android:clearTaskOnLaunch="false"
         android:windowSoftInputMode="stateHidden" >
     </activity>
 ```
@@ -69,7 +71,8 @@ ViscuitSDK.init(this, "viscuit", "test_ads", null);
 ```
 Viscuit을 Android 6.0 이상에서 사용하실 경우에는
 android.permission.WRITE_EXTERNAL_STORAGE 권한을 미리 획득하신후 초기화를 하셔야 합니다.
-#### 2.3 콜백을 받기 위한 리스너 등록 및 광고 호출
+
+#### 2.3 <span style="color:red"> 콜백을 받기 위한 리스너 등록</span>
 리워드 지급 목적으로 제공되는 Listener입니다.
 사용자가 동영상 광고 시청에 대한 CallBack을 제공합니다.
 
@@ -79,12 +82,20 @@ ViscuitSDK.setViscuitListener(new onViscuitListner() {
 			public void adcallbackmessage(ViscuitResult result) {
 				switch(result) {
 				case ERROR:
+					//네트워크 에러 및 광고 시청 중간에 앱 종료 등
 					break;
 				case NOAD:
+					// 광고 없음
 					break;
 				case SKIP:
+					//스킵 상품의 광고를 스킵함.
 					break;
 				case SUCCESS:
+					//정상적으로 광고 시청을 모두 완료함.
+					//리워드 지급
+					break;
+				case ADREADY:
+					// ViscuitSDK.checkAdStatus 을 했을 경우에 광고가 있다면 ADREADY가 호출 된다.
 					break;
 				}
 			}
@@ -99,7 +110,16 @@ ViscuitSDK.viscuitStart();
 ```
 
 
-####2.5 라이프 사이클 등록
+####2.5 <span style="color:red">광고 존재 여부 확인</span>
+현재 시청 가능한 광고에 존재 여부를 확인한다.
+Callback으로 결과가 전송 된다.
+```java
+ViscuitSDK.checkAdStatus(this);
+```
+
+
+
+####2.6 라이프 사이클 등록
 올바른 광고 재생을 위해 Activity의 생명 주기를 전달합니다.
 사용자의 화면 전환에 대한 처리를 하기 위함이니 Fragment가 아닌 Activity에서 호출해 주시기 바랍니다.
 ```java
@@ -120,7 +140,7 @@ ViscuitSDK.viscuitStart();
 
 
 
-####2.6 Progard
+####2.7 Proguard
 난독화를 하실 경우에는 아래 코드를 추가해주시기 바랍니다.
 난독화가 제대로 동작하지 않을 경우에는 동영상 재생 후 랜딩이 제대로 되지 않을수 있습니다.
 ```java

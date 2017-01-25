@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8"standalone="no"?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-
-<string name="app_name">VISCUIT_SDK_SAMPLE</string>
+    <string name="app_name">비스킷 SDK DEMO</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_sub">SubActivity</string>
 </resources>
