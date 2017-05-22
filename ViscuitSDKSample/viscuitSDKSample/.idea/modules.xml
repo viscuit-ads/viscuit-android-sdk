@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../ViscuitSDK-AndroidStudio.iml" filepath="$PROJECT_DIR$/../ViscuitSDK-AndroidStudio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../viscuitSDKMakeULikeSample/viscuitSDKMakeULikeSample.iml" filepath="$PROJECT_DIR$/../viscuitSDKMakeULikeSample/viscuitSDKMakeULikeSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/viscuitSDKSample.iml" filepath="$PROJECT_DIR$/viscuitSDKSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../viscuitsdk/viscuitsdk.iml" filepath="$PROJECT_DIR$/../viscuitsdk/viscuitsdk.iml" />
+    </modules>
+  </component>
+</project>

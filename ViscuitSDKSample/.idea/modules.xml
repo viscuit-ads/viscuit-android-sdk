@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ViscuitSDKSample.iml" filepath="$PROJECT_DIR$/ViscuitSDKSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/viscuitSDKSample/viscuitSDKSample.iml" filepath="$PROJECT_DIR$/viscuitSDKSample/viscuitSDKSample.iml" />
+    </modules>
+  </component>
+</project>

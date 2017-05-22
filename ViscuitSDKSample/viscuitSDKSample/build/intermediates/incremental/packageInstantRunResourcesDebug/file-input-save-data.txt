@@ -1,0 +1,36 @@
+#Internal package file, do not edit.
+#Wed May 17 14:53:16 KST 2017
+2.base=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\assets\\debug
+5.file=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\assets\\debug\\3_skip.png
+5.set=ASSET
+3.base=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\res\\resources-debug.ap_
+6.file=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\assets\\debug\\5_skip.png
+2.set=ASSET
+10.set=ASSET
+10.file=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\assets\\debug\\2_skip.png
+4.base=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\res\\resources-debug.ap_
+7.file=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\assets\\debug\\0_skip.png
+7.set=ASSET
+count=11
+0.file=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\assets\\debug\\1_skip.png
+5.base=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\assets\\debug
+8.file=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\assets\\debug\\4_skip.png
+4.set=ANDROID_RESOURCE
+6.base=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\assets\\debug
+1.file=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxhdpi-v4\\viscuit_logo.png
+9.set=ANDROID_RESOURCE
+9.file=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_main.xml
+10.base=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\assets\\debug
+1.set=ANDROID_RESOURCE
+7.base=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\assets\\debug
+2.file=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\assets\\debug\\click.png
+6.set=ASSET
+0.base=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\assets\\debug
+8.base=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\assets\\debug
+3.file=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\res\\resources-debug.ap_\\resources.arsc
+3.set=ANDROID_RESOURCE
+1.base=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\res\\resources-debug.ap_
+9.base=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\res\\resources-debug.ap_
+4.file=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\res\\resources-debug.ap_\\AndroidManifest.xml
+8.set=ASSET
+0.set=ASSET

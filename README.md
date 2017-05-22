@@ -21,7 +21,7 @@
 ---
 
 ## VISCUIT SDK 구성
-- <span style="color:red">viscuit_android_sdk_1_1_3.jar</span>
+- <span style="color:red">viscuit_android_sdk_1_1_5.jar</span>
 - 샘플 프로젝트
 - 연동가이드
 
@@ -67,7 +67,7 @@ android.permission.WRITE_EXTERNAL_STORAGE 권한을 획득하셔야 합니다.
 현재 슬롯 상태를 초기화 한다. Init시 광고 정보를 가져와서 영상 정보를 저장합니다.
 슬롯 아이디를 변경할 이유가 없다면 Application에 최초 1번 설정하는것이 좋습니다.
 ```java
-ViscuitSDK.init(this, "viscuit", "test_ads", null);
+ViscuitSDK.init(this, "viscuit", "test_ads");
 ```
 Viscuit을 Android 6.0 이상에서 사용하실 경우에는
 android.permission.WRITE_EXTERNAL_STORAGE 권한을 미리 획득하신후 초기화를 하셔야 합니다.
@@ -75,6 +75,8 @@ android.permission.WRITE_EXTERNAL_STORAGE 권한을 미리 획득하신후 초�
 #### 2.3 <span style="color:red"> 콜백을 받기 위한 리스너 등록</span>
 리워드 지급 목적으로 제공되는 Listener입니다.
 사용자가 동영상 광고 시청에 대한 CallBack을 제공합니다.
+
+<span style="color:red"> ADReady CallBAck 삭제됨. 1.1.5</span>
 
 ```java
 ViscuitSDK.setViscuitListener(new onViscuitListner() {
@@ -94,9 +96,6 @@ ViscuitSDK.setViscuitListener(new onViscuitListner() {
 					//정상적으로 광고 시청을 모두 완료함.
 					//리워드 지급
 					break;
-				case ADREADY:
-					// ViscuitSDK.checkAdStatus 을 했을 경우에 광고가 있다면 ADREADY가 호출 된다.
-					break;
 				}
 			}
 		});
@@ -110,16 +109,25 @@ ViscuitSDK.viscuitStart();
 ```
 
 
-####2.5 <span style="color:red">광고 존재 여부 확인</span>
-현재 시청 가능한 광고에 존재 여부를 확인한다.
-Callback으로 결과가 전송 된다.
+####2.5 <span style="color:red">광고 정보 갱신하기</span>
+
+서버로부터 최신의 광고 데이터를 받아온다.
+
 ```java
-ViscuitSDK.checkAdStatus(this);
+ViscuitSDK.reloadAdStatus(this);
+ViscuitSDK.reloadAdStatus(this, onReloadListener listener);
 ```
 
+####2.6 <span style="color:red">광고 상태 체크</span>
 
+SDK 내부에 있는 광고 상태를 리턴한다.
+ViscuitSDK.reloadAdStatus(this) 를 호출 함으로써 최신의 정보로 갱신이 가능하다.
 
-####2.6 라이프 사이클 등록
+```java
+(boolean) ViscuitSDK.isAdReady(this);
+```
+
+####2.7 라이프 사이클 등록
 올바른 광고 재생을 위해 Activity의 생명 주기를 전달합니다.
 사용자의 화면 전환에 대한 처리를 하기 위함이니 Fragment가 아닌 Activity에서 호출해 주시기 바랍니다.
 ```java
@@ -139,8 +147,15 @@ ViscuitSDK.checkAdStatus(this);
 ```
 
 
+####2.8 개발 모드 셋팅
+개발모드를 설정한다. 해당 값이 true일 경우에는 샘플 광고가 노출 됩니다.
+또한 시뮬레이터에서도 동작합니다.
+```java
+ViscuitSDK.setDevType(true);
+```
 
-####2.7 Proguard
+
+####2.9 Proguard
 난독화를 하실 경우에는 아래 코드를 추가해주시기 바랍니다.
 난독화가 제대로 동작하지 않을 경우에는 동영상 재생 후 랜딩이 제대로 되지 않을수 있습니다.
 ```java

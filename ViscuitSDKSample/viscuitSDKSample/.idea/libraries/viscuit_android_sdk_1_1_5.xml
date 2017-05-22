@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="viscuit_android_sdk_1_1_5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/viscuit_android_sdk_1_1_5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
