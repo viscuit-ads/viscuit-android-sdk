@@ -101,7 +101,7 @@ ViscuitSDK.setViscuitListener(new onViscuitListner() {
 		});
 ```
 
-####2.4 광고 호출
+#### 2.4 광고 호출
 동영상 광고를 노출 합니다.
 이때 재생할 영상이 없다면 CallBack으로 NoAd가 전달 됩니다.
 ```java
@@ -109,7 +109,7 @@ ViscuitSDK.viscuitStart();
 ```
 
 
-####2.5 <span style="color:red">광고 정보 갱신하기</span>
+#### 2.5 <span style="color:red">광고 정보 갱신하기</span>
 
 서버로부터 최신의 광고 데이터를 받아온다.
 
@@ -118,7 +118,7 @@ ViscuitSDK.reloadAdStatus(this);
 ViscuitSDK.reloadAdStatus(this, onReloadListener listener);
 ```
 
-####2.6 <span style="color:red">광고 상태 체크</span>
+#### 2.6 <span style="color:red">광고 상태 체크</span>
 
 SDK 내부에 있는 광고 상태를 리턴한다.
 ViscuitSDK.reloadAdStatus(this) 를 호출 함으로써 최신의 정보로 갱신이 가능하다.
@@ -127,7 +127,7 @@ ViscuitSDK.reloadAdStatus(this) 를 호출 함으로써 최신의 정보로 갱�
 (boolean) ViscuitSDK.isAdReady(this);
 ```
 
-####2.7 라이프 사이클 등록
+#### 2.7 라이프 사이클 등록
 올바른 광고 재생을 위해 Activity의 생명 주기를 전달합니다.
 사용자의 화면 전환에 대한 처리를 하기 위함이니 Fragment가 아닌 Activity에서 호출해 주시기 바랍니다.
 ```java
@@ -147,7 +147,7 @@ ViscuitSDK.reloadAdStatus(this) 를 호출 함으로써 최신의 정보로 갱�
 ```
 
 
-####2.8 개발 모드 셋팅
+#### 2.8 개발 모드 셋팅
 개발모드를 설정한다. 해당 값이 true일 경우에는 샘플 광고가 노출 됩니다.
 또한 시뮬레이터에서도 동작합니다.
 ```java
@@ -155,7 +155,7 @@ ViscuitSDK.setDevType(true);
 ```
 
 
-####2.9 Proguard
+#### 2.9 Proguard
 난독화를 하실 경우에는 아래 코드를 추가해주시기 바랍니다.
 난독화가 제대로 동작하지 않을 경우에는 동영상 재생 후 랜딩이 제대로 되지 않을수 있습니다.
 ```java
