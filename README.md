@@ -92,7 +92,7 @@ repositories {
 
     flatDir {
     
-        dirs 'libs'
+        dirs 'libs'	# viscuit_android_sdk_1_1_6.aar 파일이 있는 디렉토리를 지정한다 
 	
     }
 }
