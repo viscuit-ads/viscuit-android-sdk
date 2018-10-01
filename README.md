@@ -91,6 +91,7 @@ repositories {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    
     implementation ('com.viscuit.sdk:viscuit_android_sdk_1_1_6:1.1.6@aar')
 	... 
 }
