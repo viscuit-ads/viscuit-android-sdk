@@ -78,22 +78,32 @@ android.permission.WRITE_EXTERNAL_STORAGE 권한을 획득하셔야 합니다.
 	- 버전 : 1.1.6
 
 android {
+
 	...
+	
 	useLibrary  'org.apache.http.legacy'	# org.apache.http 패키지를 사용하기 위해서 사용한다. 
+	
 	... 
+	
 }
 
 repositories {
+
     flatDir {
+    
         dirs 'libs'
+	
     }
 }
 
 dependencies {
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     
     implementation ('com.viscuit.sdk:viscuit_android_sdk_1_1_6:1.1.6@aar')
+    
 	... 
+	
 }
 
 
