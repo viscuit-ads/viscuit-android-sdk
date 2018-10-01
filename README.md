@@ -25,7 +25,8 @@
 ---
 
 ## VISCUIT SDK 구성
-- <span style="color:red">viscuit_android_sdk_1_1_5.jar</span>
+- <span style="color:red"> 1.1.5 버전 : viscuit_android_sdk_1_1_5.jar</span>
+- <span style="color:red"> 1.1.6 버전 : viscuit_android_sdk_1_1_6.aar</span>
 - 샘플 프로젝트
 - 연동가이드
 
