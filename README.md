@@ -18,6 +18,7 @@
     	* [2.7 라이프 사이클 등록](#27-라이프-사이클-등록)
     	* [2.8 개발 모드 셋팅](#28-개발-모드-셋팅)
     	* [2.9 Proguard](#29-proguard)
+	* [2.10 참고사항]
 
 
 ---
@@ -61,8 +62,38 @@ android.permission.WRITE_EXTERNAL_STORAGE 권한을 획득하셔야 합니다.
 ### 2. VISCUIT 사용하기
 
 
-#### 2.1 라이브러리 IMPORT
+#### 2.1 라이브러리 IMPORT 
+
+#### 2.1.1 라이브러리 IMPORT (버전 : 1.1.5을 사용할 경우)
 배포된 viscukit_android.jar를 프로젝트 내에 library로 import 한다.(ex./libs)
+
+#### 2.1.2 라이브러리 IMPORT (버전 : 1.1.6을 사용할 경우)
+- jar 파일이 아니라 aar 파일임을 주의한다. 
+- 배포된 viscuit_android_sdk_1_1_6.aar를 프로젝트 내에 library로 import 한다.(ex./libs)
+- build.gradle 파일을 열고 아래의 사항을 추가한다. 
+- aar 파일을 추가할 때 아래의 정보를 참고하여 추가한다. 
+- 패키지 : com.viscuit.sdk 
+- 파일네임 : viscuit_android_sdk_1_1_6
+- 버전 : 1.1.6
+
+android {
+	...
+	useLibrary  'org.apache.http.legacy'	# org.apache.http 패키지를 사용하기 위해서 사용한다. 
+	... 
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation ('com.viscuit.sdk:viscuit_android_sdk_1_1_6:1.1.6@aar')
+	... 
+}
+
 
 
 #### 2.2 VISCUIT 초기화
@@ -169,3 +200,9 @@ ViscuitSDK.setDevType(true);
 -keep class com.viscuit.sdk.** { *; }
 
 ```
+
+#### 2.10 Viscuit 서비스 참고사항
+- 광고 영상은 Download & Play 방식을 취한다. 
+- 광고 다운로드 시점은 광고 재생 요청시에만 광고 영상을 다운로드한다. 
+- 다운로드된 영상은 viscuit 이라는 디렉토리에 생성된다. 
+- 그 밖의 이미지 파일이나 viscuit 서비스를 위해서 필요한 파일들도 생성된다. 
