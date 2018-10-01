@@ -73,9 +73,9 @@ android.permission.WRITE_EXTERNAL_STORAGE 권한을 획득하셔야 합니다.
 - 배포된 viscuit_android_sdk_1_1_6.aar를 프로젝트 내에 library로 import 한다.(ex./libs)
 - build.gradle 파일을 열고 아래의 사항을 추가한다. 
 - aar 파일을 추가할 때 아래의 정보를 참고하여 추가한다. 
-- 패키지 : com.viscuit.sdk 
-- 파일네임 : viscuit_android_sdk_1_1_6
-- 버전 : 1.1.6
+	- 패키지 : com.viscuit.sdk 
+	- 파일네임 : viscuit_android_sdk_1_1_6
+	- 버전 : 1.1.6
 
 android {
 	...
@@ -206,4 +206,4 @@ ViscuitSDK.setDevType(true);
 - 광고 영상은 Download & Play 방식을 취한다. 
 - 광고 다운로드 시점은 광고 재생 요청시에만 광고 영상을 다운로드한다. 
 - 다운로드된 영상은 viscuit 이라는 디렉토리에 생성된다. 
-- 그 밖의 이미지 파일이나 viscuit 서비스를 위해서 필요한 파일들도 생성된다. 
+- 그 밖의 이미지 파일이나 viscuit 서비스를 위해서 필요한 파일들도 된다. 
