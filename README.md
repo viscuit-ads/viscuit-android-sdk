@@ -27,7 +27,7 @@
 
 ## VISCUIT SDK 구성
 - <span style="color:red"> 1.1.5 버전 : viscuit_android_sdk_1_1_5.jar</span>
-- <span style="color:red"> 1.1.6 버전 : viscuit_android_sdk_1_1_6.aar</span>
+- <span style="color:red"> 1.1.6 버전 : viscuit_android_sdk_1_1_6.jar</span>
 - 샘플 프로젝트
 - 연동가이드
 
@@ -91,6 +91,12 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     
     implementation files('libs/viscuit_android_sdk_1_1_6.jar')
+    
+    # classes.jar 와 google-play-services.jar 인 경우, 
+    # App 상에서 아래의 사항을 build.gradle에 추가하되 버전 차이 및 기타 이유로 충돌이 나는 경우 
+    # viscuit에서 제공하는 라이브러리를 사용하지 않아도 된다.  
+    implementation files('libs/classes.jar')	# 필요시, classes.jar를 추가한다. 
+    implementation files('libs/google-play-services.jar')  # 필요시, google-play-services.jar를 추가한다.
     
 	... 
 	
