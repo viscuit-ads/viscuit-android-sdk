@@ -70,14 +70,10 @@ android.permission.WRITE_EXTERNAL_STORAGE 권한을 획득하셔야 합니다.
 #### 2.1.1 라이브러리 IMPORT (버전 : 1.1.5을 사용할 경우)
 배포된 viscukit_android.jar를 프로젝트 내에 library로 import 한다.(ex./libs)
 
-#### 2.1.2 라이브러리 IMPORT (버전 : 1.1.6을 사용할 경우)
-- jar 파일이 아니라 aar 파일임을 주의한다. 
-- 배포된 viscuit_android_sdk_1_1_6.aar를 프로젝트 내에 library로 import 한다.(ex./libs)
-- build.gradle 파일을 열고 아래의 사항을 추가한다. 
-- aar 파일을 추가할 때 아래의 정보를 참고하여 추가한다. 
-	- 패키지 : com.viscuit.sdk 
-	- 파일네임 : viscuit_android_sdk_1_1_6
-	- 버전 : 1.1.6
+#### 2.1.2 라이브러리 IMPORT (버전 : 1.1.6을 사용할 경우 - patch version )
+- jar 파일 타입 
+- 배포된 viscuit_android_sdk_1_1_6.jar를 프로젝트 내에 library로 import 한다.(ex./libs)
+
 
 android {
 
@@ -102,7 +98,7 @@ dependencies {
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     
-    implementation ('com.viscuit.sdk:viscuit_android_sdk_1_1_6:1.1.6@aar')
+    implementation files('libs/viscuit_android_sdk_1_1_6.jar')
     
 	... 
 	
