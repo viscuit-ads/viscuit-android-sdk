@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="OutlineTextView"><attr format="boolean" name="textStroke"/><attr format="float" name="textStrokeWidth"/><attr format="color" name="textStrokeColor"/></declare-styleable>
     <dimen name="button_margin">20dp</dimen>
     <integer name="google_play_services_version">8487000</integer>
     <string name="app_name">비스킷 SDK DEMO</string>
@@ -16,4 +15,9 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    <declare-styleable name="OutlineTextView">
+        <attr format="boolean" name="textStroke"/>
+        <attr format="float" name="textStrokeWidth"/>
+        <attr format="color" name="textStrokeColor"/>
+    </declare-styleable>
 </resources>

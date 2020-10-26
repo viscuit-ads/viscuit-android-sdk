@@ -28,6 +28,7 @@
 ## VISCUIT SDK 구성
 - <span style="color:red"> 1.1.5 버전 : viscuit_android_sdk_1_1_5.jar</span>
 - <span style="color:red"> 1.1.6 버전 : viscuit_android_sdk_1_1_6.jar</span>
+- <span style="color:red"> 1.1.7 버전 : viscuit_android_sdk_1_1_7.jar</span>
 - 샘플 프로젝트
 - 연동가이드
 
@@ -39,18 +40,12 @@
 ```ruby
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-```
-Viscuit을 Android 6.0 이상에서 사용하실 경우에는
-android.permission.WRITE_EXTERNAL_STORAGE 권한을 획득하셔야 합니다.
 
-##### 1.2 Google Play Service meta-data 추가
-```ruby
-    <meta-data
-        android:name="com.google.android.gms.version"
-        android:value="@integer/google_play_services_version"/>
 ```
-##### 1.3 <span style="color:red">viscuit Activity 추가</span>
+
+
+
+##### 1.2 <span style="color:red">viscuit Activity 추가</span>
 ```xml
     <activity
         android:name="com.viscuit.sdk.ViscuitActivity"
@@ -70,36 +65,20 @@ android.permission.WRITE_EXTERNAL_STORAGE 권한을 획득하셔야 합니다.
 #### 2.1.1 라이브러리 IMPORT (버전 : 1.1.5을 사용할 경우)
 배포된 viscukit_android.jar를 프로젝트 내에 library로 import 한다.(ex./libs)
 
-#### 2.1.2 라이브러리 IMPORT (버전 : 1.1.6을 사용할 경우 - patch version )
-- viscuit_android_sdk_1_1_6.aar 버전을 사용하지 말고 패치된 viscuit_android_sdk_1_1_6.jar 버전을 사용할 것 
-- jar 파일 타입임 (기존의 1.1.5 버전과 동일한 방식으로 사용하면 됨)
-- 배포된 viscuit_android_sdk_1_1_6.jar를 프로젝트 내에 library로 import 한다.(ex./libs)
+#### 2.1.2 라이브러리 IMPORT (버전 : 1.1.6 이상 )
+- viscuit_android_sdk_1_1_7.jar 버전을 사용할 것 
+- 배포된 viscuit_android_sdk_1_1_7.jar를 프로젝트 내에 library로 import 한다.(ex./libs)
 
-
-android {
-
-	...
-	
-	useLibrary  'org.apache.http.legacy'	# org.apache.http 패키지를 사용하기 위해서 사용한다. 
-	
-	... 
-	
-}
 
 
 dependencies {
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     
-    implementation files('libs/viscuit_android_sdk_1_1_6.jar')
+    implementation files('libs/viscuit_android_sdk_1_1_7.jar')
     
-    # classes.jar 와 google-play-services.jar 인 경우, 
-    # App 상에서 아래의 사항을 build.gradle에 추가하되 버전 차이 및 기타 이유로 충돌이 나는 경우 
-    # viscuit에서 제공하는 라이브러리를 사용하지 않아도 된다.  
-    implementation files('libs/classes.jar')	# 필요시, classes.jar를 추가한다. 
-    implementation files('libs/google-play-services.jar')  # 필요시, google-play-services.jar를 추가한다.
-    
-	... 
+    // Google 광고 아이디 관련. (옵션)
+    implementation 'com.google.android.gms:play-services-ads-identifier:17.0.0'
 	
 }
 
