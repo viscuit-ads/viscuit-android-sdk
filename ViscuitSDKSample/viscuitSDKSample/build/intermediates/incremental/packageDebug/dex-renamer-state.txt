@@ -1,7 +1,0 @@
-#Wed May 17 14:53:37 KST 2017
-base.0=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_c94b263d3232bbdfed9246c26139675b67233b5f
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_965aaf0815cfc090b432608c2b256667fc2a33d3\\classes.dex
-base.1=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_965aaf0815cfc090b432608c2b256667fc2a33d3
-file.0=D\:\\workspace_androidstudio\\ViscuitSDKSample\\viscuitSDKSample\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_c94b263d3232bbdfed9246c26139675b67233b5f\\classes.dex
